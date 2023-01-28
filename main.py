@@ -43,18 +43,21 @@ cpu = random.randint(0,len(list)-1)
 
 # Putting the if statements into perspective and combining the list and possible outcomes into the print statements
 
-if player_int >= 3 or player_int < 0:
+if player_int >= 3 or player_int < 0 :
   print("You have typed an invalid number, you lose!")
+  # print(f"{list[player_int]}\n Computer chose: \n {list[cpu]} \n Error! Try again" )
 elif player_int == 0 and cpu == 2:
-  print(f"{list[0]}\n Computer Chose:\n {list[2]} \n You win.")
+  print(f"{list[0]}\n Computer Chose:\n {list[cpu]} \n You win.")
 elif player_int == 1 and cpu == 0:
-  print(f"{list[1]}\n Computer Chose:\n {list[0]} \n You win.")
+  print(f"{list[1]}\n Computer Chose:\n {list[cpu]} \n You win.")
 elif player_int == 2 and cpu ==1:
-  print(f"{list[2]}\n Computer Chose:\n {list[1]} \n You win.")
+  print(f"{list[2]}\n Computer Chose:\n {list[cpu]} \n You win.")
 elif player_int == cpu:
   print(f"{list[player_int]}\n Computer chose: \n {list[cpu]} \n It\'s a draw" )
+
+else:
+  print(f"{list[player_int]}\n Computer chose: \n {list[cpu]} \n You lose.")
   
 # This last statement might not be relevant
-else:
-  print(f"{list[player_int]}\n Computer chose: \n {list[cpu]} \n Error! Try again" )
+
 
